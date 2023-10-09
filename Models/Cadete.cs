@@ -8,29 +8,31 @@ public class Cadete
         private string? nombre;
         private string? direccion;
         private string? telefono;
-        private int cantidadPedidos;
 
-        public int CantidadPedidos { get => cantidadPedidos; set => cantidadPedidos = value; }
+        public int Id { get => id; set => id = value; }
+        public string? Nombre { get => nombre; set => nombre = value; }
+        public string? Direccion { get => direccion; set => direccion = value; }
+        public string? Telefono { get => telefono; set => telefono = value; }
 
         public Cadete(int id, string nombre, string direccion, string telefono){
-            this.id = id;
-            this.nombre = nombre;
-            this.direccion = direccion;
-            this.telefono = telefono;
+            this.Id = id;
+            this.Nombre = nombre;
+            this.Direccion = direccion;
+            this.Telefono = telefono;
         }
         public int GetIdCadete(){
-            return id;
+            return Id;
         }
         public int CantidadPedidosEntregados(){
-            return cantidadPedidos;
+            return 0;
         }
         public int JornalACobrar(){
             int jornal = CantidadPedidosEntregados() * 500;
             return jornal;
         }
         public void ListarInformacion(){
-            Console.WriteLine("\nID: "+id);
-            Console.WriteLine("\nNombre: "+nombre);
+            Console.WriteLine("\nID: "+Id);
+            Console.WriteLine("\nNombre: "+Nombre);
         }
     }   
 }

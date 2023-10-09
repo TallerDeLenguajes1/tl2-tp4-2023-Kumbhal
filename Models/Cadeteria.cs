@@ -19,7 +19,7 @@ public class Cadeteria
             listadoPedidos = new List<Pedido>();
         }
         public Cadeteria(){listadoCadetes = new List<Cadete>();listadoPedidos = new List<Pedido>();}
-         private static Cadeteria cadeteriaSingleton;
+        private static Cadeteria cadeteriaSingleton;
         public static Cadeteria GetCadeteria()
         {
             if (cadeteriaSingleton == null)
@@ -81,14 +81,13 @@ public class Cadeteria
             }
             return pedidoBuscado;
         }
-        public Pedido CambiarEstadoPedido(int idPedido){
+        public bool CambiarEstadoPedido(int idPedido){
             Pedido pedidoBuscado = listadoPedidos.Find(pedido => pedido.Numero == idPedido);
             if(pedidoBuscado != null){
                 pedidoBuscado.CambiarEstado();
-            }else{
-                Console.WriteLine("No se encontro un pedido con ese ID");
+                return true;
             }
-            return pedidoBuscado;
+            return false;
         }
         public Cadete AgregarCadete(Cadete nuevoCadete){
             listadoCadetes?.Add(nuevoCadete);

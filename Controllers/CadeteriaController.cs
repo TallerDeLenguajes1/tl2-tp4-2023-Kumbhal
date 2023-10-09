@@ -14,20 +14,19 @@ public class CadeteriaController : ControllerBase{
         _logger = logger;
         cadeteria = Cadeteria.GetCadeteria();
     }
-    [HttpGet]
+    [HttpGet("GetNombreCadeteria")]
     public ActionResult<string> GetNombreCadeteria(){
         return Ok(cadeteria.Nombre);
     }
-    [HttpGet]
-    [Route("Cadetes")]
-    public ActionResult<IEnumerable<Cadete>> GetCadetes(){
-        var cadetes = cadeteria.GetCadetes();
-        return Ok(cadetes);
+    [HttpGet("GetCadetes")]
+    public ActionResult<List<Cadete>> GetCadetes()
+    {
+        List<Cadete>? listCadetes = cadeteria.GetCadetes();
+        return Ok(listCadetes);
     }
-    [HttpGet]
-    [Route("Pedidos")]
-    public ActionResult<IEnumerable<Pedido>> GetPedidos(){
-        var pedidos = cadeteria.GetPedidos();
+    [HttpGet("GetPedidos")]
+    public ActionResult<List<Pedido>> GetPedidos(){
+        List<Pedido> pedidos = cadeteria.GetPedidos();
         return Ok(pedidos);
     }
     /* [HttpGet]

@@ -31,3 +31,4 @@ C:\Users\Leandro\Desktop\Programación\TdL2\tl2-tp4-2023-Kumbhal\obj\Debug\net7.
 C:\Users\Leandro\Desktop\Programación\TdL2\tl2-tp4-2023-Kumbhal\obj\Debug\net7.0\tl2-tp4-2023-Kumbhal.pdb
 C:\Users\Leandro\Desktop\Programación\TdL2\tl2-tp4-2023-Kumbhal\obj\Debug\net7.0\tl2-tp4-2023-Kumbhal.genruntimeconfig.cache
 C:\Users\Leandro\Desktop\Programación\TdL2\tl2-tp4-2023-Kumbhal\obj\Debug\net7.0\ref\tl2-tp4-2023-Kumbhal.dll
+C:\Users\Leandro\Desktop\Programación\TdL2\tl2-tp4-2023-Kumbhal\bin\Debug\net7.0\Cadetes.json
